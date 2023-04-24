@@ -1,0 +1,33 @@
+# 디자인 패턴 2차시 스터디 - 옵저버 패턴
+## 🤔 갱신된 상태를 옵저버에게 전달하는 문제를 해결할 수 있는 다른 접근법이 무엇이 있을까?
+| 측정치를 직접 전달하는 게 상태를 갱신하는 가장 간단한 방법이라고 생각했습니다. 근데 이게 정말 좋은 걸까요? 갱신된 상태를 옵저버에게 전달하는 문제를 해결할 수 있는 다른 접근법을 생각해 보세요.
+
+``` java
+public interface Observer {
+    public void update(float temp, float humidity, float pressure);
+}
+```
+여기서 상태 값 바로 전달하는 방법말고 다른 게 뭐가 있을까?
+Pull 방법으로 가져오고 push 방법으로 리턴하는 방법이 있다! 
+책 뒷 부분에 나와 있음!
+- 상태를 전달해서 갱신됐을 때 값을 바꾸는 방법!
+
+
+## 🤔 실행 중에 하나의 옵저버를 다른 옵저버로 바꿔도 주제는 계속해서 다른 옵저버에 데이터를 보낼 수 있다
+
+- 옵저버 인터페이스가 변화하는 것이 아닌 인터페이스를 구현하는 구성 클래스가 변화하는 것을 의미한다.
+- 예를 들어 Cat -> Dog 으로 바껴도 된다.
+
+## 💡출판(발행)-구독 패턴(Publisher-Subscriber Pattern)에 대해서 알아보자! 
+| 상대방의 상태와 관계없이 일방적으로 동작하면 비동기라고 한다.
+
+https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKtEtG%2Fbtrq9XQRCLS%2Fzv7iRRcN6GV4MLBzTXYU4k%2Fimg.png![image](https://user-images.githubusercontent.com/79795051/233906741-04d1b364-7017-407e-ab89-6fc94cceaa30.png)
+
+메시지 큐가 존재해서 미들웨어가 처리를 해주기 때문에 서로 의존도가 없다.
+
+옵저버 패턴은 대부분 동기방식으로 동작하도록 설계한다.
+동기방식의 동작이란,
+객체에서 이벤트가 발생하면 객체가 옵저버들의 목록을 순회하면서 옵저버의 메서드들을 순차적으로 호출한다는 것이다.
+
+패턴은 동기와 비동기 처리 방식에 따라서 사용을 결정하면 될 것 같다!
+참고한 출처: https://gobae.tistory.com/122

@@ -20,8 +20,7 @@ Pull 방법으로 가져오고 push 방법으로 리턴하는 방법이 있다!
 
 ## 💡출판(발행)-구독 패턴(Publisher-Subscriber Pattern)에 대해서 알아보자! 
 | 상대방의 상태와 관계없이 일방적으로 동작하면 비동기라고 한다.
-
-https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKtEtG%2Fbtrq9XQRCLS%2Fzv7iRRcN6GV4MLBzTXYU4k%2Fimg.png![image](https://user-images.githubusercontent.com/79795051/233906741-04d1b364-7017-407e-ab89-6fc94cceaa30.png)
+![image](https://user-images.githubusercontent.com/79795051/233906741-04d1b364-7017-407e-ab89-6fc94cceaa30.png)
 
 메시지 큐가 존재해서 미들웨어가 처리를 해주기 때문에 서로 의존도가 없다.
 
